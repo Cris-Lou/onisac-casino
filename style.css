@@ -1,0 +1,41 @@
+body {
+    background-image: url(./images/des.jpg);
+    background-size: 100%;
+    background-repeat: inherit;
+    width: 100%;
+    height: 50%;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 100px;
+    letter-spacing: 30px;
+}
+
+h1, h2{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+#startButton {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #fb594757;
+    color: white;
+    border-color: #f51617;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 100px;
+}
+
+#startButton:hover{
+    border-color: #f5161785;
+}
+
+#startButton:active{
+    border-color: #fb594757;
+    box-shadow: none;
+}
+
