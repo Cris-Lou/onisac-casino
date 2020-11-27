@@ -7,7 +7,7 @@ startButton.addEventListener("click", function() {
     /**
     * déclarations des variables et constantes
      */
-    let autorisation_jeux = window.prompt("Bonjour, avez vous l'autorisation de jouer ? (Répondez par oui ou non)");
+    let interdit_jeux = window.prompt("Bonjour, êtes-vous interdit de jeux ? (Répondez par oui ou non)");
     let solde = window.prompt("Quel est votre solde ?");
     let age = window.prompt ("Quel est votre âge ?");
     let action;
@@ -16,17 +16,16 @@ startButton.addEventListener("click", function() {
      * fonctions
      */
     function autoriser_entree () {
-            if (autorisation_jeux == "oui" && solde >= -8000) {
+            if (interdit_jeux == "non" && solde >= -8000) {
                 alert("Bienvenu(e) au casino !");
-                // return "ok";
             }
             else if (solde < -8000) {
                 alert("Votre solde est insuffisant pour entrer.");
             }
-            else if (autorisation_jeux == "non") {
+            else if (interdit_jeux == "oui") {
                 alert("Vous êtes interdit de jeux. Vous ne pouvez pas entrer. Aurevoir.");
             }
-            else {
+            else{
                 alert ("Nous n'avons pas compris votre saisie. Merci de recommencer.");
             }
     };
@@ -62,7 +61,7 @@ startButton.addEventListener("click", function() {
     autoriser_entree();
     
     // si entrée autorisée et tant que le solde et le choix d'action est autre que sortir...
-    while(solde >= -8000 && action != "sortir" && autorisation_jeux == "oui"){
+    while(solde >= -8000 && action != "sortir" && interdit_jeux == "non"){
         action = prompt ("Que voulez vous faire ? (Jouer, consommer ou sortir)");
                     //choix action de jouer
         if (action == "jouer"){
