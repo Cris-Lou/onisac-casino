@@ -52,6 +52,15 @@ startButton.addEventListener("click", function() {
             alert("Votre solde est insuffisant pour consommer.");
         }
     };
+
+    // function verifier_solde() {
+    //     if (solde < -8000) {
+    //         alert("Votre solde est insuffisant pour continuer"); // bout de code à utiliser à la mise en place d'un code pour décrémenter le solde à chaque conso.
+    //     }
+    //     else {
+    //         alert("enjoy");
+    //     }
+    // }
     
     
     /**
@@ -72,17 +81,14 @@ startButton.addEventListener("click", function() {
             servir_boisson();
         }
                 //erreur de saisie
-        else if (action != "jouer" || "consommer" || "sortir"){
+        else {
             alert("Nous n'avons pas compris votre saisie.");
             action;
         }
-    }
-    
-    if (action === "sortir") { 
+    };
+    // choix action sortir ou solde insuffisant
+    if (action == "sortir" || solde <-8000) { 
         alert("Merci de votre visite, à bientôt !");
-    }
-    else if (solde < -8000) {
-        alert("Votre solde est insuffisant pour continuer"); // mettre en place un code pour décrémenter le solde à chaque conso.
     }
 });
 
